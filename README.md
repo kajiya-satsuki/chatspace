@@ -26,10 +26,10 @@ Things you may want to cover:
 
 ## usersテーブル
 
-|Column|Typy|Options|
+|Column|Type|Options|
 |------|----|-------|
-|id|int|null: false|
-|user_name|str|null: false, index: true|
+|id|int|primary key|
+|name|str|null: false, index: true|
 |e-mail|str|null: false, unique: true|
 
 ### Association
@@ -39,37 +39,37 @@ Things you may want to cover:
 
 ## groupsテーブル
 
-|Column|Typy|Options|
+|Column|Type|Options|
 |------|----|-------|
-|id|int|null:false|
-|group_name|str|null: false, unique: true|
+|id|int|primary key|
+|name|str|null: false, unique: true|
 
 ### Association
--has_many :users, through: :group_users
--has_many :group_users
+- has_many :users, through: :group_users
+- has_many :group_users
 
 ## group_usersテーブル
 
-|Column|Typy|Options|
+|Column|Type|Options|
 |------|----|-------|
-|id|int|null: false|
+|id|int|primary key|
 |user_id|int|null: false, foreign_key: true|
 |group_id|int|null: false, foreign_key: true|
 
 ### Association
--belongs_to :user
--belongs_to :group
+- belongs_to :user
+- belongs_to :group
 
-##messagesテーブル
+## messagesテーブル
 
-|Column|Typy|Options|
+|Column|Type|Options|
 |------|----|-------|
-|id|int|null: false|
-|body|text||
-|image|str||
+|id|int|primary key|
+|body|str|default: ''|
+|image|str|default: ''|
 |group_id|int|null: false|
 |user_id|int|null: false|
 
 ### Association
--belongs_to :user
--belongs_to :group
+- belongs_to :user
+- belongs_to :group

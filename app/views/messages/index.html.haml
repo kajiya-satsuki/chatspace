@@ -4,8 +4,7 @@
       .side-bar__user__name
         %h4
           satsuki
-      .side-bar__user__icon
-        %form
+      .side-bar__user__icons
         %i.fa.fa-edit
         %i.fa.fa-cog
     .side-bar__groups
@@ -24,15 +23,15 @@
           %h6
             まだメッセージはありません。
   .main-contents
-    .main-contents__group
-      .main-contents__group__left
-        .main-contents__group__left__name
+    .main-contents__header
+      .main-contents__header__group
+        .main-contents__header__group__name
           %h3
             sample1
-        .main-contents__group__left__members
+        .main-contents__header__group__members
           %h5
             Member:satsuki
-      .main-contents__group__edit
+      .main-contents__header__edit
         %a
           Edit
     .main-contents__chat-contents
@@ -56,13 +55,10 @@
         .main-contents__chat-contents__chat__message
           %h5
             aaa
-    .main-contents__footer
-      .main-contents__footer__send-box
-        .main-contents__footer__send-box__message
-          %h4
-            Type a message
-        .main-contents__footer__send-box__icon
-          %i.fa.fa-image
-      .main-contents__footer__button
-        %a
-          Send
+    .main-contents__form
+      %form{:method => "post"}
+        %input{:class => "send-box", :type => "text", :placeholder => "Type a message"}
+        .main-contents__form__pic-icon
+          %label
+            %i.fa.fa-image
+        %input{:class => "send-button", :type => "submit", :value => "Send"}

@@ -1,0 +1,64 @@
+.chat
+  .side-bar
+    .side-bar__user
+      .side-bar__user__name
+        %h4
+          satsuki
+      .side-bar__user__icons
+        %i.fa.fa-edit
+        %i.fa.fa-cog
+    .side-bar__groups
+      .side-bar__groups__group
+        .side-bar__groups__group__name
+          %h5
+            sample1
+        .side-bar__groups__group__message
+          %h6
+            まだメッセージはありません。
+      .side-bar__groups__group
+        .side-bar__groups__group__name
+          %h5
+            sample2
+        .side-bar__groups__group__message
+          %h6
+            まだメッセージはありません。
+  .main-contents
+    .main-contents__header
+      .main-contents__header__group
+        .main-contents__header__group__name
+          %h3
+            sample1
+        .main-contents__header__group__members
+          %h5
+            Member:satsuki
+      .main-contents__header__edit
+        %a
+          Edit
+    .main-contents__chat-contents
+      .main-contents__chat-contents__chat
+        .main-contents__chat-contents__chat__member
+          %h4
+            satsuki
+        .main-contents__chat-contents__chat__date
+          %h5
+            2018/02/23 9:44
+        .main-contents__chat-contents__chat__message
+          %h5
+            aaa
+      .main-contents__chat-contents__chat
+        .main-contents__chat-contents__chat__member
+          %h4
+            satsuki
+        .main-contents__chat-contents__chat__date
+          %h5
+            2018/02/23 9:44
+        .main-contents__chat-contents__chat__message
+          %h5
+            aaa
+    .main-contents__form
+      %form{method: "post"}
+        %input{class: "main-contents__form__send-box", type: "text", placeholder: "Type a message"}
+        .main-contents__form__pic-icon
+          %label
+            %i.fa.fa-image
+        %input{class: "main-contents__form__send-button", type: "submit", value: "Send"}

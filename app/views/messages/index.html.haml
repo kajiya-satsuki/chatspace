@@ -56,9 +56,9 @@
           %h5
             aaa
     .main-contents__form
-      %form{:method => "post"}
-        %input{:class => "send-box", :type => "text", :placeholder => "Type a message"}
+      %form{method: "post"}
+        %input{class: "main-contents__form__send-box", type: "text", placeholder: "Type a message"}
         .main-contents__form__pic-icon
           %label
             %i.fa.fa-image
-        %input{:class => "send-button", :type => "submit", :value => "Send"}
+        %input{class: "main-contents__form__send-button", type: "submit", value: "Send"}

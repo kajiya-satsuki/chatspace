@@ -1,27 +1,5 @@
 .chat
-  .side-bar
-    .side-bar__user
-      .side-bar__user__name
-        %h4
-          satsuki
-      .side-bar__user__icons
-        %i.fa.fa-edit
-        %i.fa.fa-cog
-    .side-bar__groups
-      .side-bar__groups__group
-        .side-bar__groups__group__name
-          %h5
-            sample1
-        .side-bar__groups__group__message
-          %h6
-            まだメッセージはありません。
-      .side-bar__groups__group
-        .side-bar__groups__group__name
-          %h5
-            sample2
-        .side-bar__groups__group__message
-          %h6
-            まだメッセージはありません。
+  = render "common/side_bar"
   .main-contents
     .main-contents__header
       .main-contents__header__group

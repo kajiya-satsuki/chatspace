@@ -1,0 +1,22 @@
+.side-bar
+  .user
+    %h4.user__name
+      = current_user.name
+    %ul.user__icons
+      %li.edit
+        = link_to do
+          %i.fa.fa-edit
+      %li.setting
+        = link_to user_path, class: "cog" do
+          %i.fa.fa-cog
+  .groups
+    .groups__group
+      %h5.groups__group__name
+        sample1
+      %h6.groups__group__message
+        まだメッセージはありません。
+    .groups__group
+      %h5.groups__group__name
+        sample2
+      %h6.side-bar__groups__group__message
+        まだメッセージはありません。

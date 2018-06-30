@@ -11,19 +11,19 @@
       padding: 0px 20px;
       line-height: 100px;
       font-size: 16px;
-      &__name{
+      &__name {
         font-weight: bold;
         float: left;
       }
-      &__icons{
+      &__icons {
         float: right;
-        li {
+        &__list {
           display: inline;
-          .cog {
+          a {
             text-decoration: none;
-          }
-          i{
-            color: $whiteColor;
+            i{
+              color: $whiteColor;
+            }
           }
         }
       }

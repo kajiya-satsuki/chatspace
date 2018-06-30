@@ -3,11 +3,11 @@
     %h4.user__name
       = current_user.name
     %ul.user__icons
-      %li.edit
+      %li.user__icons__list
         = link_to do
           %i.fa.fa-edit
-      %li.setting
-        = link_to user_path, class: "cog" do
+      %li.user__icons__list
+        = link_to edit_user_path(current_user) do
           %i.fa.fa-cog
   .groups
     .groups__group

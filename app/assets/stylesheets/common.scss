@@ -1,0 +1,45 @@
+  .side-bar {
+    width: 300px;
+    height: 100%;
+    float: left;
+    background-color: $deepBlueColor;
+    color: $whiteColor;
+
+    .user {
+      height: 100px;
+      background-color: $darkDeepBlueColor;
+      padding: 0px 20px;
+      line-height: 100px;
+      font-size: 16px;
+      &__name {
+        font-weight: bold;
+        float: left;
+      }
+      &__icons {
+        float: right;
+        &__list {
+          display: inline;
+          a {
+            text-decoration: none;
+            i{
+              color: $whiteColor;
+            }
+          }
+        }
+      }
+    }
+
+    .groups {
+      padding: 20px 20px 0px;
+      &__group {
+        padding: 0px 0px 40px;
+          &__name {
+            font-size: 15px;
+            padding-bottom: 5px;
+          }
+          &__message {
+            font-size: 11px;
+          }
+      }
+    }
+  }

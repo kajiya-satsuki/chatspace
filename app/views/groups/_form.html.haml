@@ -12,13 +12,12 @@
       = f.label :name, "グループ名", class: 'chat-group-form__field--left__label'
     .chat-group-form__field--right
       = f.text_field :name, class: 'chat__group_name chat-group-form__field--left__input', placeholder: "グループ名を入力してください"
-  .chat-group-form__field.clearfix
 
   .chat-group-form__field.clearfix
     .chat-group-form__field--left
       = f.label :name, "チャットメンバー", class: 'chat-group-form__field--left__label'
     .chat-group-form__field--right
-      = f.collection_check_boxes :user_ids, User.all, :id, :name
+      = f.collection_check_boxes :user_ids, users, :id, :name
   .chat-group-form__field.clearfix
     .chat-group-form__field--left
     .chat-group-form__field--right

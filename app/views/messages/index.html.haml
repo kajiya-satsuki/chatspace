@@ -1,42 +1,25 @@
 .chat
-  = render "common/side_bar"
+  = render "side_bar"
   .main-contents
     .main-contents__header
       .main-contents__header__group
         .main-contents__header__group__name
           %h3
-            sample1
+            = @group.name
         .main-contents__header__group__members
-          %h5
-            Member:satsuki
+          %span
+            Member:
+          - @group.users.each do |user|
+            = "#{user.name}"
       .main-contents__header__edit
-        %a
+        = link_to edit_group_path(@group) do
           Edit
     .main-contents__chat-contents
-      .main-contents__chat-contents__chat
-        .main-contents__chat-contents__chat__member
-          %h4
-            satsuki
-        .main-contents__chat-contents__chat__date
-          %h5
-            2018/02/23 9:44
-        .main-contents__chat-contents__chat__message
-          %h5
-            aaa
-      .main-contents__chat-contents__chat
-        .main-contents__chat-contents__chat__member
-          %h4
-            satsuki
-        .main-contents__chat-contents__chat__date
-          %h5
-            2018/02/23 9:44
-        .main-contents__chat-contents__chat__message
-          %h5
-            aaa
+      = render partial: 'message', collection: @messages
     .main-contents__form
-      %form{method: "post"}
-        %input{class: "main-contents__form__send-box", type: "text", placeholder: "Type a message"}
-        .main-contents__form__pic-icon
-          %label
-            %i.fa.fa-image
-        %input{class: "main-contents__form__send-button", type: "submit", value: "Send"}
+      = form_for [@group, @message] do |f|
+        = f.text_field :body, class: 'main-contents__form__send-box', placeholder: 'Type a message'
+        = f.label :image, class: 'main-contents__form__pic-icon' do
+          %i.fa.fa-image
+          = f.file_field :image, class: 'main-contents__form__pic-icon__hidden'
+        = f.submit value: 'Send', class: 'main-contents__form__send-button'

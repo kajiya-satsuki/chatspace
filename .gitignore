@@ -18,3 +18,8 @@
 
 .byebug_history
 public/uploads
+
+.DS_Store
+app/.DS_Store
+app/views/.DS_Store
+app/views/devise/.DS_Store

@@ -1,7 +1,7 @@
 require 'rails_helper'
 describe MessagesController do
-  let(:user) {create(:user)}
   let(:group) {create(:group)}
+  let(:user) {create(:user)}
 
   describe 'GET #index' do
 
@@ -14,6 +14,10 @@ describe MessagesController do
 
       it "assigns the requested message to @message" do
         expect(assigns(:message)).to be_a_new(Message)
+      end
+
+      it "assigns the requested messages to @messages" do
+        expect(assigns(:messages)).to eq messages
       end
 
       it "assigns the requested group to @group" do

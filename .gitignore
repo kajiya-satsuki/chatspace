@@ -17,9 +17,13 @@
 /yarn-error.log
 
 .byebug_history
+<<<<<<< HEAD
 public/uploads
 
 .DS_Store
 app/.DS_Store
 app/views/.DS_Store
 app/views/devise/.DS_Store
+=======
+public/uploads
+>>>>>>> 2b47e25e4def7cfc2506710d12fc532cf5d1afc1
